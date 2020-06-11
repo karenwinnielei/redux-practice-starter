@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import PlayerCard from './PlayerCard';
 
@@ -9,7 +10,7 @@ const PlayerList = (props) => {
 
   useEffect(() => {
     props.fetchPlayers();
-  }, [props]);
+  }, []);
 
   return (
     <div>
