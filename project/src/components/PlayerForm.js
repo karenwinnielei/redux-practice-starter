@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { postPlayer } from '../actions';
+import { postPlayers } from '../actions';
 
 const PlayerForm = (props) => {
   const [player, setPlayer] = useState({
@@ -64,4 +64,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {postPlayer})(PlayerForm);
+export default connect(mapStateToProps, {postPlayers})(PlayerForm);
