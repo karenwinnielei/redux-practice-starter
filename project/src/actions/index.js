@@ -4,7 +4,7 @@ export const FETCH_START = 'FETCH_START';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAILURE = 'FETCH_FAILURE';
 
-export const fetchPlayers = () => {
+export const fetchPlayers = () => (dispatch) => {
   dispatch({ type: FETCH_START });
 
   axios
@@ -23,7 +23,7 @@ export const POST_SUCCESS = 'POST_SUCCESS';
 export const POST_FAILURE = 'POST_FAILURE';
 
 // post needs props because the prop will end up being the payload and the thing being added
-export const postPlayers = (player) => {
+export const postPlayers = (player) => (dispatch) => {
   dispatch({ type: POST_START });
   axios
     .post(`http://localhost:8888/players`, player)
